@@ -1,0 +1,54 @@
+#top-page {
+    .mainview {
+        display: block;
+        position: relative;
+        height: calc(100vh - 10rem);
+
+        .container {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .left-wrapper {
+            display: block;
+            height: fit-content;
+
+            .desc {
+                line-height: 6.4rem;
+                margin-bottom: 6.4rem;
+            }
+
+            .btn {
+                width: 39.4rem;
+                height: 5.6rem;
+                font-size: 1.8rem;
+                column-gap: 1rem;
+
+                svg {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    z-index: 10;
+
+                    path {
+                        transition: all 0.6s cubic-bezier(0.8, 0, 0.2, 1)
+                    }
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: $green_color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-img {
+            width: 51.1rem;
+        }
+    }
+}

@@ -7,18 +7,17 @@
     width: fit-content;
     max-width: 100%;
     padding: 0.8rem 1.2rem;
-    background-color: #3B8E65;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    background-color: $green_color;
+    font-family: "Higure Gothic";
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 100%;
-    letter-spacing: 0.2em;
     color: #FFFFFF;
     text-align: center;
     text-decoration: none;
     outline: none;
     transition: all 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    border-radius: 2.5rem;
+    border-radius: 90px;
     cursor: pointer;
     z-index: 0;
 
@@ -31,7 +30,7 @@
         bottom: 0;
         display: block;
         border-radius: inherit;
-        border: 2px solid #3B8E65;
+        border: 2px solid $green_color;
         z-index: 2;
     }
 
@@ -51,7 +50,7 @@
     }
 
     &:hover {
-        color: #3B8E65;
+        color: $green_color;
 
         &::before {
             transform-origin: left top;
@@ -65,20 +64,6 @@
         font-weight: inherit;
         text-decoration: none;
         z-index: 3;
-    }
-
-    &.btn-yellow {
-        background: #ffc520;
-        color: #FFF;
-        border-radius: 5px;
-
-        &::after {
-            border: unset;
-        }
-
-        &::before {
-            background: $green-color;
-        }
     }
 }
 
