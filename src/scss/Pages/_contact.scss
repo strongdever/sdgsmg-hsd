@@ -22,7 +22,12 @@
     .form-wrapper {
         display: flex;
         flex-direction: column;
-        row-gap: 2.4rem;
+        row-gap: 3.2rem;
+    }
+
+    .href-right {
+        width: fit-content;
+        margin: 0 auto;
     }
 
     .vertical-wrapper {
@@ -58,6 +63,7 @@
 
         label {
             display: flex;
+            align-items: center;
         }
     }
 
@@ -91,6 +97,10 @@
         margin: 4.8rem auto 0 auto;
     }
 
+    .province-item {
+        max-width: 34.6rem;
+    }
+
     &.main-confirm {
 
         input,
@@ -119,9 +129,16 @@
         column-gap: 0.8rem;
 
         &::after {
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.2rem;
             width: fit-content;
             content: '必須';
-            color: #F00;
+            background: $green_color;
+            color: #FFF;
+            font-family: "Higure Gothic";
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 700;
             line-height: 100%;
         }
     }

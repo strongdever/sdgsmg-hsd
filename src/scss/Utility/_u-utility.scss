@@ -75,18 +75,13 @@ input[type="password"],
 select,
 textarea {
     position: relative;
-    background-color: #FBFBFB;
-    border: 1px solid #888888;
+    background-color: #F1F1F1;
+    border: transparent;
+    border-radius: 4px;
     box-sizing: border-box;
-    padding: 0.8rem 0.8rem;
+    padding: 2.0rem 1.6rem;
     width: 100%;
-    font-family: $font_gothic;
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 2.4rem;
     text-align: left;
-    letter-spacing: 0.08em;
-    color: #3E3A39;
 }
 
 input[type="text"],
@@ -95,7 +90,7 @@ input[type="tel"],
 input[type="number"],
 input[type="password"],
 select {
-    height: 4.0rem;
+    height: 5.6rem;
 }
 
 input[type="text"]:focus,
@@ -115,13 +110,13 @@ input[type="number"]::placeholder,
 input[type="password"]::placeholder,
 select::placeholder,
 textarea::placeholder {
-    color: #AEAEAE;
+    color: #ACACAC;
 }
 
 select {
     position: relative;
     appearance: none;
-    background-image: url(../img/select-down.png);
+    background-image: url(../img/select-down.svg);
     background-position: calc(100% - 0.8rem) 50%;
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;

@@ -1,5 +1,105 @@
 main {
     margin-top: 10rem;
+    padding-bottom: 12rem;
+}
+
+.eng {
+    color: $green_color;
+    font-family: "Avenir";
+    font-weight: 800;
+}
+
+.page-label {
+    .eng {
+        margin-bottom: 2.4rem;
+    }
+    .head-text {
+        color: #333;
+    }
+}
+
+.font-14-400 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 100% */
+}
+
+.font-16-500 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-16-800 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-18-500 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-18-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-18-800 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-20-800 {
+    color: $green_color;
+    font-family: "Avenir";
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 100% */
+}
+
+.font-24-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .font-36-700 {
@@ -11,6 +111,16 @@ main {
     line-height: 100%;
 }
 
+.font-40-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 4.0rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+}
+
 .font-42-700 {
     color: #333;
     font-family: "Higure Gothic";
@@ -20,3 +130,114 @@ main {
     line-height: 100%;
 }
 
+.news-list {
+    position: relative;
+    width: 100%;
+
+    .news-item {
+        display: flex;
+        column-gap: 3.2rem;
+        align-items: center;
+        height: 6.0rem;
+        border-bottom: 1px solid #EAEAEA;
+        background: #FFF;
+
+        &:hover {
+            cursor: pointer;
+
+            .date {
+                opacity: 0.7;
+            }
+
+            .title {
+                opacity: 0.7;
+            }
+
+            svg {
+                path {
+                    fill: #1A8C33;
+                }
+            }
+        }
+
+        .date {
+            width: 6.7%;
+            white-space: nowrap;
+            flex-shrink: 0;
+            color: #888;
+        }
+
+        .title {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            flex-shrink: 0;
+
+            path {
+                fill: #C7C7C7;
+            }
+        }
+    }
+}
+
+.href-right {
+    display: flex;
+    column-gap: 1.6rem;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .svg-wrapper {
+        position: relative;
+        width: 4.0rem;
+        height: 4.0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 90px;
+        background: $green_color;
+        flex-shrink: 0;
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+
+}
+
+.report-list {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    column-gap: 4.0rem;
+    row-gap: 4.6rem;
+
+    .report-item {
+        width: 100%;
+        display: block;
+
+        img {
+            width: 100%;
+            aspect-ratio: 373 / 272;
+            flex-shrink: 0;
+            margin-bottom: 2.0rem;
+            border-radius: 16px;
+        }
+
+        .title {
+            line-height: 2.8rem;
+        }
+    }
+}

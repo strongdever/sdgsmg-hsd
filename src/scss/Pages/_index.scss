@@ -51,4 +51,185 @@
             width: 51.1rem;
         }
     }
+
+    .news {
+        margin-bottom: 10.4rem;
+
+        .head-wrapper {
+            margin-bottom: 3.6rem;
+
+            .eng {
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        .news-list {
+            margin-bottom: 4.0rem;
+        }
+    }
+
+    .social-issue {
+        margin-bottom: 12rem;
+
+        .container {
+            display: flex;
+            align-items: center;
+            column-gap: 11rem;
+        }
+
+        .left-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 34.9rem;
+                height: 28.6rem;
+                aspect-ratio: 349 / 286;
+                flex-shrink: 0;
+            }
+        }
+
+        .right-wrapper {
+            width: 51%;
+            flex-shrink: 0;
+
+            .title {
+                margin-bottom: 3.2rem;
+                line-height: 4.0;
+            }
+
+            .content {
+                line-height: 3.4rem;
+                margin-bottom: 4.0rem;
+            }
+        }
+    }
+
+    .activity {
+        margin-bottom: 12rem;
+
+        .container {
+            display: flex;
+            align-items: center;
+            column-gap: 11rem;
+        }
+
+        .right-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 48.3rem;
+                aspect-ratio: 483 / 308;
+                flex-shrink: 0;
+            }
+        }
+
+        .left-wrapper {
+            width: 51%;
+            flex-shrink: 0;
+
+            .title {
+                margin-bottom: 3.2rem;
+                line-height: 4.0rem;
+            }
+
+            .content {
+                line-height: 3.4rem;
+                margin-bottom: 4.0rem;
+            }
+        }
+    }
+
+    .report {
+        margin-bottom: 12rem;
+
+        .head-wrapper {
+            width: fit-content;
+            display: block;
+            text-align: center;
+            margin: 0 auto 4.8rem auto;
+        }
+    }
+
+    .seminar {
+
+        .head-wrapper {
+            width: fit-content;
+            display: block;
+            text-align: center;
+            margin: 0 auto 4.8rem auto;
+        }
+
+        .seminar-list {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0px, 1fr));
+            column-gap: 4.0rem;
+
+            .seminar-item {
+                display: block;
+
+                iframe {
+                    width: 100%;
+                    aspect-ratio: 373 / 272;
+                    flex-shrink: 0;
+                    margin-bottom: 2.0rem;
+                    border-radius: 16px;
+                }
+
+                .title {
+                    line-height: 2.8rem;
+                }
+            }
+        }
+    }
+
+    .head-wrapper {
+        margin-bottom: 3.6rem;
+
+        .eng {
+            margin-bottom: 1.6rem;
+        }
+    }
+}
+
+#inqueyr-page {
+    .sub-mainview {
+        padding-top: 9.6rem;
+        padding-bottom: 8.8rem;
+        text-align: center;
+
+        .page-label {
+            margin-bottom: 6.4rem;
+        }
+
+        .content {
+            line-height: 3.6rem;
+            color: #333;
+        }
+    }
+
+    .form-section {
+        padding-top: 5.6rem;
+
+        form {
+            ul {
+                margin: 0 auto 4.8rem auto;
+                max-width: 63.6rem;
+            }
+
+            .bottom-desc {
+                width: fit-content;
+                margin: 4.0rem auto 0 auto;
+                text-align: left;
+                line-height: 2.8rem;
+            }
+        }
+    }
 }
