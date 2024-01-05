@@ -9,12 +9,37 @@ main {
     font-weight: 800;
 }
 
+.eng-name {
+    font-family: "Avenir" !important;
+}
+
 .page-label {
     .eng {
         margin-bottom: 2.4rem;
     }
+
     .head-text {
         color: #333;
+    }
+}
+
+.subpage-firstview {
+    padding-top: 9.4rem;
+    padding-bottom: 10.4rem;
+}
+
+.spot-title {
+    display: flex;
+    align-items: center;
+    column-gap: 1.0rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 1.0rem;
+        height: 1.0rem;
+        border-radius: 90px;
+        background: $green_color;
     }
 }
 
@@ -28,12 +53,32 @@ main {
     /* 100% */
 }
 
+.font-15-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
 .font-16-500 {
     color: #333;
     font-family: "Higure Gothic";
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.36px;
+}
+
+.font-16-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
     line-height: 100%;
     /* 100% */
     letter-spacing: 0.36px;
@@ -83,6 +128,26 @@ main {
     letter-spacing: 0.36px;
 }
 
+.font-20-500 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 100% */
+}
+
+.font-20-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+}
+
 .font-20-800 {
     color: $green_color;
     font-family: "Avenir";
@@ -97,6 +162,15 @@ main {
     color: #333;
     font-family: "Higure Gothic";
     font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.font-32-700 {
+    color: #333;
+    font-family: "Higure Gothic";
+    font-size: 3.2rem;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
@@ -186,34 +260,70 @@ main {
     }
 }
 
-.href-right {
+.href-right,
+.href-left {
+    width: fit-content;
     display: flex;
     column-gap: 1.6rem;
     align-items: center;
 
     &:hover {
         cursor: pointer;
-        opacity: 0.7;
+
+        .svg-wrapper {
+            .circle {
+                scale: 1.2;
+            }
+        }
     }
 
     .svg-wrapper {
         position: relative;
         width: 4.0rem;
         height: 4.0rem;
+        scale: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 90px;
-        background: $green_color;
-        flex-shrink: 0;
+
+        .circle {
+            position: absolute;
+            width: 4.0rem;
+            height: 4.0rem;
+            flex-shrink: 0;
+            border-radius: 90px;
+            background: $green_color;
+            transition: scale 0.2s;
+            z-index: 0;
+        }
 
         svg {
             width: 1.6rem;
             height: 1.6rem;
+            z-index: 1;
         }
     }
 
+    span {
+        transition: transform 0.3s;
+    }
+}
 
+.href-right {
+    &:hover {
+        span {
+            transform: translateX(-0.6rem);
+        }
+    }
+}
+
+.href-left {
+    &:hover {
+        span {
+            transform: translateX(0.6rem);
+        }
+    }
 }
 
 .report-list {
@@ -238,6 +348,38 @@ main {
 
         .title {
             line-height: 2.8rem;
+        }
+    }
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.2rem;
+    align-items: center;
+    width: fit-content;
+
+    .btn {
+        &.category {
+            width: fit-content;
+            height: 4.0rem;
+            padding: 0.8rem 2.0rem;
+            background-color: #FFF;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: $green_color;
+
+            &::after {
+                border: 1.5px solid $green_color;
+            }
+
+            &::before {
+                background: $green_color;
+            }
+
+            &:hover {
+                color: #FFF;
+            }
         }
     }
 }
