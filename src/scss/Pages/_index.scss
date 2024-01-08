@@ -202,7 +202,7 @@
 .inquery {
     .sub-mainview {
         padding-top: 9.6rem;
-        padding-bottom: 8.8rem;
+        padding-bottom: 6.4rem;
         text-align: center;
 
         .page-label {
@@ -457,7 +457,17 @@
     }
 }
 
+.news-page {
+    .subpage-firstview {
+        padding-bottom: 8.0rem;
+    }
+}
+
 .single-news-page {
+    .subpage-firstview {
+        padding-bottom: 8.0rem;
+    }
+
     .news-content {
         border-bottom: 1px solid #D7D7D7;
         margin-bottom: 5.6rem;
@@ -482,6 +492,10 @@
 }
 
 .single-report-page {
+    .subpage-firstview {
+        padding-bottom: 8.8rem;
+    }
+
     .report-wrapper {
         .container {
             display: flex;
@@ -523,7 +537,7 @@
 
             .search-bar {
                 display: flex;
-                width: 1005;
+                width: 100%;
                 height: 5.0rem;
                 margin-bottom: 4.8rem;
 
@@ -546,27 +560,33 @@
                     }
                 }
             }
+
             .spot-title {
                 margin-bottom: 2.4rem;
             }
 
             .categories-wrapper {
                 margin-bottom: 4.8rem;
+
                 .category-list {
                     column-gap: 1.2rem;
                     row-gap: 1.2rem;
                 }
             }
+
             .frequency {
                 margin-bottom: 4.8rem;
             }
+
             .article-list {
                 display: grid;
                 grid-template-columns: repeat(1, minmax(0px, 1fr));
                 row-gap: 2.4rem;
+
                 .article-item {
                     display: flex;
                     column-gap: 0.8rem;
+
                     img {
                         width: 10.6rem;
                         height: fit-content;
@@ -575,13 +595,219 @@
                         object-fit: cover;
                         border-radius: 0.8rem;
                     }
+
                     .title {
                         line-height: 2.8rem;
                         overflow: hidden;
                         display: -webkit-box;
-                        -webkit-line-clamp: 3; /* Number of lines to display before truncating */
+                        -webkit-line-clamp: 3;
+                        /* Number of lines to display before truncating */
                         -webkit-box-orient: vertical;
                         text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apply-page {
+    .subpage-firstview {
+        padding-bottom: 5.6rem;
+    }
+
+    .top-desc {
+        line-height: 3.6rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .href-left {
+        margin-bottom: 8.0rem;
+    }
+
+    .green-title {
+        width: fit-content;
+        padding: 1.8rem 2.4rem;
+        border-radius: 0px 0px 16px 0px;
+        background: $green_color;
+        color: #FFF;
+        margin-bottom: 4.0rem;
+    }
+
+    .spot-title {
+        margin-bottom: 3.2rem;
+
+        &.with-desc {
+            margin-bottom: 2.0rem;
+        }
+
+        &.last-one {
+            margin-bottom: 5.6rem;
+        }
+
+        &.doing-ready {
+            display: flex;
+            column-gap: 1.6rem;
+            align-items: center;
+
+            &::after {
+                content: '※準備中';
+                color: #DC5B5B;
+                font-family: "Higure Gothic";
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%;
+                /* 100% */
+            }
+        }
+    }
+
+    .sub-desc {
+        padding-left: 2.6rem;
+        line-height: 3.6rem;
+        margin-bottom: 3.2rem;
+    }
+}
+
+.about-page {
+    .subpage-firstview {
+        padding-bottom: 5.6rem;
+    }
+
+    .top-desc {
+        line-height: 3.6rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .href-left {
+        margin-bottom: 12rem;
+    }
+
+    .group-wrapper {
+
+        .container {
+            width: 86%;
+            max-width: 108rem;
+        }
+
+        .group-title {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    .group-philosophy {
+        margin-bottom: 13.2rem;
+
+        .philosophy-list {
+            position: relative;
+            width: 100%;
+
+            .philosophy-item {
+                display: flex;
+                column-gap: 10rem;
+                width: 100%;
+                position: relative;
+                padding-left: 1.6rem;
+                padding-right: 1.6rem;
+
+                &:not(:last-child) {
+                    padding-bottom: 5.0rem;
+                    border-bottom: 1px solid #D7D7D7;
+                    margin-bottom: 5.0rem;
+                }
+
+                .item-title {
+                    width: 12%;
+                    flex-shrink: 0;
+
+                    .en-title {
+                        font-family: "Avenir";
+                    }
+                }
+
+                .spot-title {
+                    margin-bottom: 1.6rem;
+
+                    &::before {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }
+                }
+
+                .content-wrapper {
+                    .content {
+                        line-height: 5.6rem;
+                        color: $green_color;
+                    }
+
+                    .item-list {
+                        position: relative;
+
+                        .item {
+                            display: flex;
+                            column-gap: 2.4rem;
+                            border-radius: 16px;
+                            background: #F4F4F4;
+                            padding: 3.2rem 2.9rem;
+
+                            &:not(:last-child) {
+                                margin-bottom: 4.0rem;
+                            }
+
+                            .item-num {
+                                width: 0.5rem;
+                                color: $green_color;
+                                line-height: 3.6rem;
+                            }
+
+                            .item-content {
+                                line-height: 3.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .group-overview {
+        .overview-table {
+            .row-wrapper {
+                position: relative;
+                width: 1005;
+                display: flex;
+                border-bottom: 1px solid #D7D7D7;
+                &:first-child {
+                    border-top: 1px solid #D7D7D7;
+                }
+                .tb-head {
+                    width: 25%;
+                    flex-shrink: 0;
+                    padding: 1.8rem 3.2rem;
+                    background: #F4FEF6;
+                }
+                .tb-content {
+                    padding: 1.8rem 3.2rem;
+                    .chairs {
+                        line-height: 3.2rem;
+                        margin-bottom: 2.8rem;
+                        .font-18-700 {
+                            display: inline-block;
+                            width: 7.2rem;
+                        }
+                    }
+                    .members {
+                        margin-bottom: 2.4rem;
+                        .label {
+                            margin-bottom: 1.2rem;
+                        }
+                        .member-list {
+                            line-height: 3.2rem;
+                        }
+                    }
+                    .href-left {
+                        margin-bottom: 0;
                     }
                 }
             }

@@ -1077,7 +1077,7 @@ body.mobile-nav-active #mobile-nav {
 
 .inquery .sub-mainview {
   padding-top: 9.6rem;
-  padding-bottom: 8.8rem;
+  padding-bottom: 6.4rem;
   text-align: center;
 }
 
@@ -1362,6 +1362,14 @@ body.mobile-nav-active #mobile-nav {
   height: 2.4rem;
 }
 
+.news-page .subpage-firstview {
+  padding-bottom: 8.0rem;
+}
+
+.single-news-page .subpage-firstview {
+  padding-bottom: 8.0rem;
+}
+
 .single-news-page .news-content {
   border-bottom: 1px solid #D7D7D7;
   margin-bottom: 5.6rem;
@@ -1382,6 +1390,10 @@ body.mobile-nav-active #mobile-nav {
 
 .single-news-page .href-left {
   margin: 0 auto;
+}
+
+.single-report-page .subpage-firstview {
+  padding-bottom: 8.8rem;
 }
 
 .single-report-page .report-wrapper .container {
@@ -1432,7 +1444,7 @@ body.mobile-nav-active #mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1005;
+  width: 100%;
   height: 5.0rem;
   margin-bottom: 4.8rem;
 }
@@ -1514,6 +1526,226 @@ body.mobile-nav-active #mobile-nav {
   /* Number of lines to display before truncating */
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+}
+
+.apply-page .subpage-firstview {
+  padding-bottom: 5.6rem;
+}
+
+.apply-page .top-desc {
+  line-height: 3.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.apply-page .href-left {
+  margin-bottom: 8.0rem;
+}
+
+.apply-page .green-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.8rem 2.4rem;
+  border-radius: 0px 0px 16px 0px;
+  background: #1A8C33;
+  color: #FFF;
+  margin-bottom: 4.0rem;
+}
+
+.apply-page .spot-title {
+  margin-bottom: 3.2rem;
+}
+
+.apply-page .spot-title.with-desc {
+  margin-bottom: 2.0rem;
+}
+
+.apply-page .spot-title.last-one {
+  margin-bottom: 5.6rem;
+}
+
+.apply-page .spot-title.doing-ready {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.apply-page .spot-title.doing-ready::after {
+  content: '※準備中';
+  color: #DC5B5B;
+  font-family: "Higure Gothic";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 100% */
+}
+
+.apply-page .sub-desc {
+  padding-left: 2.6rem;
+  line-height: 3.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.about-page .subpage-firstview {
+  padding-bottom: 5.6rem;
+}
+
+.about-page .top-desc {
+  line-height: 3.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.about-page .href-left {
+  margin-bottom: 12rem;
+}
+
+.about-page .group-wrapper .container {
+  width: 86%;
+  max-width: 108rem;
+}
+
+.about-page .group-wrapper .group-title {
+  margin-bottom: 6.4rem;
+}
+
+.about-page .group-philosophy {
+  margin-bottom: 13.2rem;
+}
+
+.about-page .group-philosophy .philosophy-list {
+  position: relative;
+  width: 100%;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10rem;
+     -moz-column-gap: 10rem;
+          column-gap: 10rem;
+  width: 100%;
+  position: relative;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item:not(:last-child) {
+  padding-bottom: 5.0rem;
+  border-bottom: 1px solid #D7D7D7;
+  margin-bottom: 5.0rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .item-title {
+  width: 12%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .item-title .en-title {
+  font-family: "Avenir";
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .spot-title {
+  margin-bottom: 1.6rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .spot-title::before {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .content {
+  line-height: 5.6rem;
+  color: #1A8C33;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .item-list {
+  position: relative;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .item-list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2.4rem;
+     -moz-column-gap: 2.4rem;
+          column-gap: 2.4rem;
+  border-radius: 16px;
+  background: #F4F4F4;
+  padding: 3.2rem 2.9rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .item-list .item:not(:last-child) {
+  margin-bottom: 4.0rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .item-list .item .item-num {
+  width: 0.5rem;
+  color: #1A8C33;
+  line-height: 3.6rem;
+}
+
+.about-page .group-philosophy .philosophy-list .philosophy-item .content-wrapper .item-list .item .item-content {
+  line-height: 3.6rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper {
+  position: relative;
+  width: 1005;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.about-page .group-overview .overview-table .row-wrapper:first-child {
+  border-top: 1px solid #D7D7D7;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-head {
+  width: 25%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 1.8rem 3.2rem;
+  background: #F4FEF6;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content {
+  padding: 1.8rem 3.2rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .chairs {
+  line-height: 3.2rem;
+  margin-bottom: 2.8rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .chairs .font-18-700 {
+  display: inline-block;
+  width: 7.2rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .members {
+  margin-bottom: 2.4rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .members .label {
+  margin-bottom: 1.2rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .members .member-list {
+  line-height: 3.2rem;
+}
+
+.about-page .group-overview .overview-table .row-wrapper .tb-content .href-left {
+  margin-bottom: 0;
 }
 
 main {
@@ -1689,12 +1921,30 @@ main {
   line-height: 100%;
 }
 
+.font-24-800 {
+  color: #333;
+  font-family: "Higure Gothic";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+}
+
 .font-32-700 {
   color: #333;
   font-family: "Higure Gothic";
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 700;
+  line-height: 100%;
+}
+
+.font-32-800 {
+  color: #333;
+  font-family: "Higure Gothic";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 800;
   line-height: 100%;
 }
 
