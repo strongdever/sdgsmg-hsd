@@ -1748,6 +1748,278 @@ body.mobile-nav-active #mobile-nav {
   margin-bottom: 0;
 }
 
+.issues-page .subpage-firstview {
+  padding-bottom: 10.4rem;
+}
+
+.issues-page .subpage-firstview .eng {
+  text-align: center;
+}
+
+.issues-page .subpage-firstview .head-text {
+  text-align: center;
+  margin-bottom: 5.6rem;
+}
+
+.issues-page .subpage-firstview .desc {
+  text-align: center;
+  line-height: 3.6rem;
+}
+
+.issues-page .about-population .container {
+  max-width: 90rem;
+}
+
+.issues-page .about-population .top-title {
+  text-align: center;
+  margin-bottom: 8.0rem;
+}
+
+.issues-page .about-population .sub-title {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.issues-page .about-population .img-wrapper {
+  width: 100%;
+}
+
+.issues-page .about-population .img-wrapper img {
+  width: 100%;
+}
+
+.issues-page .about-population .first-ranking {
+  margin-bottom: 8.0rem;
+}
+
+.issues-page .about-population .aged-fifty {
+  margin-bottom: 3.2rem;
+}
+
+.issues-page .about-population .notice {
+  margin-bottom: 12.0rem;
+}
+
+.issues-page .about-population .notice .green-color {
+  color: #1A8C33;
+}
+
+.issues-page .society-issues .container {
+  max-width: 90rem;
+}
+
+.issues-page .issues .top-title {
+  text-align: center;
+  margin-bottom: 4.0rem;
+}
+
+.issues-page .issues .country-company {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0px, 1fr))[2];
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  -webkit-column-gap: 3.2rem;
+     -moz-column-gap: 3.2rem;
+          column-gap: 3.2rem;
+  margin-bottom: 8.1rem;
+}
+
+.issues-page .issues .country-company li {
+  display: block;
+  width: 100%;
+}
+
+.issues-page .issues .country-company li .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 5.5rem;
+  color: #FFF;
+  border-radius: 16px 16px 0px 0px;
+  border: 3px solid #9E9E9E;
+  background: #9E9E9E;
+}
+
+.issues-page .issues .country-company li .content {
+  width: 100%;
+  border-radius: 0 0 16px 16px;
+  border: 3px solid #9E9E9E;
+  background: #FFF;
+}
+
+.issues-page .issues .country-company li .content p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4.0rem 0;
+  line-height: 4.0rem;
+  margin: 0 auto;
+}
+
+.issues-page .coporate-efforts .top-title {
+  text-align: center;
+  margin-bottom: 5.6rem;
+}
+
+.issues-page .coporate-efforts .spot-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 4.0rem;
+  -webkit-column-gap: 2.4rem;
+     -moz-column-gap: 2.4rem;
+          column-gap: 2.4rem;
+}
+
+.issues-page .coporate-efforts .spot-title::before {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.issues-page .coporate-efforts .underline-text::after {
+  position: absolute;
+  content: '';
+  left: calc(2.4rem + 1.2rem);
+  width: calc(100% - 2.4rem - 1.2rem);
+  height: 1.4rem;
+  background: rgba(26, 140, 51, 0.3);
+  bottom: 0;
+}
+
+.issues-page .coporate-efforts .three-triangle {
+  display: block;
+  width: 6.3rem;
+  margin: 1.6rem auto 3.2rem auto;
+}
+
+.issues-page .coporate-efforts .rect-content {
+  width: 100%;
+  border-radius: 16px;
+  border: 3px solid #1A8C33;
+  background: #F4F4F4;
+  padding: 5.6rem 2.4rem;
+}
+
+.issues-page .coporate-efforts .rect-content .title {
+  text-align: center;
+  color: #1A8C33;
+  margin-bottom: 3.2rem;
+}
+
+.issues-page .coporate-efforts .rect-content .hsd {
+  text-align: center;
+  margin-bottom: 3.2rem;
+  font-family: "Avenir";
+  color: #717171;
+}
+
+.issues-page .coporate-efforts .rect-content .hsd span {
+  font-family: "Avenir";
+  color: #1A8C33;
+}
+
+.issues-page .coporate-efforts .rect-content .desc {
+  text-align: center;
+  line-height: 3.6rem;
+  margin-bottom: 4.0rem;
+}
+
+.issues-page .coporate-efforts .rect-content .href-left {
+  margin: 0 auto;
+}
+
+.activities-page .subpage-firstview {
+  padding-bottom: 7.2rem;
+}
+
+.activities-page .subpage-firstview .head-text {
+  margin-bottom: 5.6rem;
+}
+
+.activities-page .subpage-firstview .desc {
+  line-height: 3.6rem;
+}
+
+.activities-page .group-members {
+  margin-bottom: 10.4rem;
+}
+
+.activities-page .group-members .title {
+  margin-bottom: 3.2rem;
+}
+
+.activities-page .group-members .table-wrapper {
+  width: 100%;
+  position: relative;
+  max-width: 76rem;
+  margin-bottom: 3.2rem;
+}
+
+.activities-page .group-members .table-wrapper .row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.activities-page .group-members .table-wrapper .row-wrapper:first-child {
+  border-top: 1px solid #D7D7D7;
+}
+
+.activities-page .group-members .table-wrapper .row-wrapper .head {
+  width: 40%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 2.4rem;
+  background: #F4FEF6;
+  line-height: 3.2rem;
+}
+
+.activities-page .group-members .table-wrapper .row-wrapper .content {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 2.4rem;
+  background: #FFF;
+  line-height: 3.2rem;
+}
+
+.activities-page .realizing-issues .title {
+  margin-bottom: 3.2rem;
+}
+
+.activities-page .realizing-issues .desc {
+  line-height: 3.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.activities-page .realizing-issues .href-left {
+  margin-bottom: 8.8rem;
+}
+
+.activities-page .realizing-issues img {
+  display: block;
+  max-width: 92.3rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.terms-page .subpage-firstview {
+  padding-bottom: 8.0rem;
+}
+
+.terms-page .content {
+  line-height: 3.6rem;
+}
+
 main {
   margin-top: 10rem;
   padding-bottom: 12rem;
@@ -1925,6 +2197,24 @@ main {
   color: #333;
   font-family: "Higure Gothic";
   font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.font-28-700 {
+  color: #333;
+  font-family: "Higure Gothic";
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.font-28-800 {
+  color: #333;
+  font-family: "Higure Gothic";
+  font-size: 2.8rem;
   font-style: normal;
   font-weight: 800;
   line-height: 100%;
