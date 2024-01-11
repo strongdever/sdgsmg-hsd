@@ -2,7 +2,7 @@
 
 /*
    Template Name: Front Page Template
-   */
+*/
 
 if (!defined('ABSPATH'))
     exit;

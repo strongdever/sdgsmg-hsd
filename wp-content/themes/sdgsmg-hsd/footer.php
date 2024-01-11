@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo HOME . 'about'; ?>" class="menu-link">
+                        <a href="<?php echo HOME . 'apply'; ?>" class="menu-link">
                             <span>参加案内</span>
                         </a>
                     </li>
