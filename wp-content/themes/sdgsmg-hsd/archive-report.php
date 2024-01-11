@@ -6,6 +6,8 @@ $path_parts = pathinfo($path_parts);
 
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $cat_slug = get_query_var('report-category') ? get_query_var('report-category') : "";
+$s = get_query_var('s') ? get_query_var('s') : "";
+$search_keys = explode( ' ', $s );
 
 ?>
 
@@ -30,15 +32,21 @@ $cat_slug = get_query_var('report-category') ? get_query_var('report-category') 
                 $cats = get_terms($cats_args);
                 ?>
                 <?php if ($cats): ?>
-                <ul class="category-list">
-                <?php foreach ($cats as $cat): ?>
-                    <li class="category-item">
-                        <a class="btn category<?php if ($cat_slug == $cat->slug) { echo ' active'; } else { echo ''; } ?>" href="<?php echo get_term_link($cat); ?>">
-                            <span><?php echo $cat->name; ?></span>
-                        </a>
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
+                    <ul class="category-list">
+                        <?php foreach ($cats as $cat): ?>
+                            <li class="category-item">
+                                <a class="btn category<?php if ($cat_slug == $cat->slug) {
+                                    echo ' active';
+                                } else {
+                                    echo '';
+                                } ?>" href="<?php echo get_term_link($cat); ?>">
+                                    <span>
+                                        <?php echo $cat->name; ?>
+                                    </span>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
                 <?php endif; ?>
 
                 <div class="search-bar">
@@ -58,13 +66,13 @@ $cat_slug = get_query_var('report-category') ? get_query_var('report-category') 
                 'post_type' => 'report',
                 'post_status' => 'publish',
                 'paged' => $paged,
-                'posts_per_page' => 9,
+                'posts_per_page' => -1,
                 'orderby' => 'post_date',
                 'order' => 'DESC',
             ];
 
             $tax_query = [];
-            if( $cat_slug ) {
+            if ($cat_slug) {
                 $tax_query[] = [
                     'taxonomy' => 'report-category',
                     'field' => 'slug',
@@ -72,10 +80,30 @@ $cat_slug = get_query_var('report-category') ? get_query_var('report-category') 
                 ];
             }
 
-            if( !empty($tax_query) ) {
+            if (!empty($tax_query)) {
                 $args['tax_query'] = $tax_query;
             }
 
+            //search keys
+            if( !empty($search_keys) ) {
+                $meta_query = [
+                    'relation' => 'OR',
+                ];
+                foreach( $search_keys as $search_key ) {
+                    $meta_query[] = array(
+                        'key'     => 'report_title', // Replace with the custom field key if needed
+                        'value'   => $search_key, // Replace with your search keywords
+                        'compare' => 'LIKE',
+                    );
+                    $meta_query[] = array(
+                        'key'     => 'report_content', // Replace with the custom field key if needed
+                        'value'   => $search_key, // Replace with your search keywords
+                        'compare' => 'LIKE',
+                    );
+                }
+                $args['meta_query'] = $meta_query;
+            }
+            
             $custom_query = new WP_Query($args);
             ?>
 
@@ -97,13 +125,28 @@ $cat_slug = get_query_var('report-category') ? get_query_var('report-category') 
                         </li>
                     <?php endwhile; ?>
                 </ul>
+                <div id="news-pagination"></div>
             <?php endif; ?>
-            <div class="pagination">
-                <?php custom_pagination($custom_query->max_num_pages, $paged, $custom_query->found_posts); ?>
-            </div>
             <?php wp_reset_query(); ?>
         </div>
     </div>
 </main>
+
+<script type="text/javascript">
+    !(function ($) {
+        $(document).ready(function () {
+            $('.search-keys').val("<?php echo $s; ?>");
+
+            $('.btn-search').click(function () {
+                var search_key = $('.search-keys').val();
+                if (search_key != '') {
+                    window.location.href = "<?php echo HOME . 'report'; ?>/?s=" + search_key;
+                } else {
+                    window.location.href = "<?php echo HOME . 'report'; ?>";
+                }
+            });
+        });
+    })(jQuery);
+</script>
 
 <?php get_footer(); ?>

@@ -103,6 +103,8 @@ function theme_add_files() {
     wp_enqueue_style('c-style', T_DIRE_URI.'/assets/css/style.css', [], '1.0', 'all');
     wp_enqueue_style('c-slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css', [], '1.0', 'all');
     wp_enqueue_style('c-slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-pagination', T_DIRE_URI.'/assets/css/simplePagination.css', [], '1.0', 'all');
+
     wp_enqueue_style('c-theme', T_DIRE_URI.'/style.css', [], '1.0', 'all');
     // WordPress本体のjquery.jsを読み込まない
     if(!is_admin()) {
@@ -110,6 +112,7 @@ function theme_add_files() {
     }
 
     wp_enqueue_script('s-jquery', T_DIRE_URI.'/assets/js/jquery.min.js', [], '1.0', false);
+    wp_enqueue_script('s-pagination', T_DIRE_URI.'/assets/js/simplePagination.js', [], '1.0', false);
 }
 
 add_action('wp_enqueue_scripts', 'theme_add_files');
@@ -287,5 +290,33 @@ function track_post_views_init() {
     }
 }
 add_action('wp', 'track_post_views_init');
+
+function set_custom_meta_key($post_id)
+{    //when click the publish button
+    // Check if the post is not an auto-save or revision
+    if (!wp_is_post_autosave($post_id) && !wp_is_post_revision($post_id)) {
+        // Set the value for your custom meta key
+        $post = get_post($post_id);
+
+        //meta keys of post_title and post_content
+        if ($post) {
+            $post_title = $post->post_title;
+            $post_content = $post->post_content;
+        } else {
+            $post_title = "";
+            $post_content = "";
+        }
+        update_post_meta($post_id, 'report_title', $post_title);
+        update_post_meta($post_id, 'report_content', $post_content);
+
+        //initializing the meta key for 人気順
+        $ranking_value = (int) get_post_meta($post_id, 'popularity_ranking', true);
+        if (!($ranking_value > 0)) {
+            update_post_meta($post_id, 'popularity_ranking', 0);
+        }
+
+    }
+}
+add_action('save_post', 'set_custom_meta_key');
 
 ?>

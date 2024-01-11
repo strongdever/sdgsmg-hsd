@@ -64,4 +64,28 @@
         }
     });
 
+    $(document).ready(function () {
+        //news pagination start-------------------
+        var article_num = $('.report-list li').length;
+        var display_num = 9;
+        if( article_num <= display_num ) {
+            $('#news-pagination').hide();
+        }
+        $(".report-list li").slice(display_num).hide();
+        $('#news-pagination').pagination({
+            // Total number of items present
+            // in wrapper class
+            items: article_num,
+
+            // Items allowed on a single page
+            itemsOnPage: display_num,
+            onPageClick: function (noofele) {
+                $(".report-list li").hide()
+                    .slice(display_num * (noofele - 1),
+                        display_num + display_num * (noofele - 1)).show();
+            }
+        });
+        //news pagination end-------------------
+    });
+
 })(jQuery);

@@ -151,4 +151,21 @@
     </div>
 </main>
 
+<script type="text/javascript">
+    !(function ($) {
+        $(document).ready(function () {
+            $('.search-keys').val("<?php echo $s; ?>");
+
+            $('.btn-search').click(function () {
+                var search_key = $('.search-keys').val();
+                if (search_key != '') {
+                    window.location.href = "<?php echo HOME . 'report'; ?>/?s=" + search_key;
+                } else {
+                    window.location.href = "<?php echo HOME . 'report'; ?>";
+                }
+            });
+        });
+    })(jQuery);
+</script>
+
 <?php get_footer(); ?>
